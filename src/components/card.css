@@ -1,0 +1,10 @@
+.card_wrapper {
+    font-family: 'roboto';
+}
+
+.bg_image {
+    background-size: cover;
+    overflow: hidden;
+}
+
+

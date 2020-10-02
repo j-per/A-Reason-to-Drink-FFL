@@ -1,22 +1,41 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Card from "../components/card"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+
+  const data = useStaticQuery(graphql`
+  query MyQuery {
+    allContentfulFantasyFootball {
+      edges {
+        node {
+          postDate(formatString: "MM-DD-YYYY")
+          slug
+          title
+          id
+          cardImage {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="flex flex-col items-center">
+        {
+          data.allContentfulFantasyFootball.edges.map(edge => <Card key={edge.node.id} title={edge.node.title} date={edge.node.postDate} slug={edge.node.slug} cardImage={edge.node.cardImage.fluid} />)
+        }
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage

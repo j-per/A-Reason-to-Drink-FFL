@@ -1,0 +1,15 @@
+.header_h1 {
+    font-family: 'Fugaz One';
+}
+
+.header_ul {
+    font-family: 'Roboto';
+}
+
+@media screen and (max-width: 768px) {
+    .header_h1 {
+        font-size: 1.5rem;
+    }
+  }
+
+

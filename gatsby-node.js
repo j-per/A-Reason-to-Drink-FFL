@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
     const blog = path.resolve(`src/templates/blog.js`)
     return graphql(`
     query MyQuery {
-        allContentfulFantasyFootball {
+        allContentfulFantasyFootball(sort: {fields: postDate, order: DESC}) {
           edges {
             node {
               childContentfulFantasyFootballMainRichTextNode {

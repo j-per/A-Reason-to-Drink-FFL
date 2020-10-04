@@ -9,10 +9,10 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
   query MyQuery {
-    allContentfulFantasyFootball {
+    allContentfulFantasyFootball(sort: {fields: postDate, order: DESC}) {
       edges {
         node {
-          postDate(formatString: "MM-DD-YYYY")
+          postDate(formatString: "MMMM DD, YYYY")
           slug
           title
           id
@@ -28,8 +28,8 @@ const IndexPage = () => {
 `)
   return (
     <Layout>
-      <SEO title="Home" />
-      <div className="flex flex-col items-center">
+      <SEO title="Home" description="A Fantasy Football Blog" />
+      <div className="grid grid-cols-6 gap-3">
         {
           data.allContentfulFantasyFootball.edges.map(edge => <Card key={edge.node.id} title={edge.node.title} date={edge.node.postDate} slug={edge.node.slug} cardImage={edge.node.cardImage.fluid} />)
         }

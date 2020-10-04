@@ -5,7 +5,7 @@ module.exports = {
         footballgreen: '#63C04C',
       },
       backgroundOpacity: {
-        '75': '0.75'
+        '35': '0.35'
       }
     }
   }

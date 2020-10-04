@@ -13,10 +13,9 @@ const Header = ({ siteTitle }) => {
   return (
     <header className="bg-blue-900 shadow mb-2 flex items-center justify-between">
       <div className="py-3 ml-5">
-        <h1 className="mb-0 header_h1">
+        <h1 className="mb-0 header_h1 text-white uppercase">
           <Link
             to="/"
-            className="text-white uppercase"
           >
             {siteTitle}
           </Link>

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "A Reason to Drink Fantasby Football League",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A Fantasby Football Blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesse Perdue",
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
     "@contentful/rich-text-react-renderer": "^14.1.1",
@@ -33,7 +33,7 @@
     "tailwindcss": "^1.8.10"
   },
   "keywords": [
-    "gatsby"
+    "Fantasy Football Blog"
   ],
   "license": "0BSD",
   "scripts": {

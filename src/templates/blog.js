@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout"
 
@@ -32,6 +32,11 @@ const Blog = props => {
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <p style={{ fontFamily: `Roboto` }}>{children}</p>
+      ),
+      [INLINES.HYPERLINK]: (node, children) => (
+        <a className="underline cursor-pointer" href={node.data.uri}>
+          {children}
+        </a>
       ),
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const image = node.data.target.fields.file["en-US"]

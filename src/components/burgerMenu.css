@@ -1,10 +1,10 @@
 .burger_wrapper:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .line {
-    height: 2px;
-    background: white;
-    border-radius:50rem;
+  min-width: auto;
+  height: 2px;
+  background: white;
+  border-radius: 50rem;
 }
-

@@ -1,8 +1,8 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
-const path = require(`path`);
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -18,19 +18,18 @@ module.exports = {
         fonts: [
           {
             family: `Fugaz One`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
           {
             family: `Roboto`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
           {
             family: `Bebas Neue`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
         ],
       },
-
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -44,7 +43,7 @@ module.exports = {
       options: {
         spaceId: process.env.SPACEID,
         accessToken: process.env.ACCESSTOKEN,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -59,9 +58,8 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/beer.png`, // This path is relative to the root of the site.
       },
-
     },
-    `gatsby-plugin-postcss`
+    `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

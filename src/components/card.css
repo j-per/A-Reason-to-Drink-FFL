@@ -1,5 +1,7 @@
 .card_wrapper {
-    font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-
+.card_heading {
+  font-family: "Fugaz One";
+}

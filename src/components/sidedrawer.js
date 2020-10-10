@@ -30,7 +30,7 @@ const SideDrawer = ({ menuHandler, open }) => {
         onClick={menuHandler}
         className="mt-5 p-1 transition duration-300 ease-in-out hover:text-footballgreen"
       >
-        Home
+        Test
       </Link>
       <Link
         to="/winners"

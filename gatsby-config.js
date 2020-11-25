@@ -13,20 +13,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
             family: `Fugaz One`,
-            variants: [`400`, `700`],
+            weights: [`400`, `700`],
           },
           {
             family: `Roboto`,
-            variants: [`400`, `700`],
+            weights: [`400`, `700`],
           },
           {
             family: `Bebas Neue`,
-            variants: [`400`, `700`],
+            weights: [`400`, `700`],
           },
         ],
       },
